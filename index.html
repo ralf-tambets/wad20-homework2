@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="res/css/style.css">
-    <script type="text/javascript" src="res/js/script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="res/js/script.js"></script>
     <title>postIt! Just Post It</title>
   </head>
   <body>
@@ -18,10 +18,18 @@
           <input type="text" name="search"><button type="button">Search</button>
         </div>
         <div class="avatar-container">
-          <button type="button" name="avatar" class="avatar-button"><img src="res/images/avatar.png"></button>
+          <button type="button" name="avatar" id="avatar-button"><img id="avatar-image" src="res/images/avatar.png"></button>
         </div>
       </nav>
     </header>
+    <section id="active-user-info-container">
+      <div id="active-user-info">
+        <p id = "active-user-name">Name here</p>
+        <p id = "active-user-email">Email here</p>
+        <a href="browse.html">Browse</a><br>
+        <a href="login.html">Log Out</a>
+      </div>
+    </section>
     <section class="main-container">
       <div class="post">
         <div class="post-author">
