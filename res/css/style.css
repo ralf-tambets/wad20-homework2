@@ -85,9 +85,13 @@ nav div img {
     height: 100%;
     width: 30px;
     margin-left: 15px;
-    border-radius: 100%;
     object-fit: cover;
     object-position: top center;
+}
+
+nav div #avatar-image {
+    height: 30px;
+    border-radius: 50%;
 }
 
 nav div.search-container > input {
@@ -106,11 +110,14 @@ nav div.search-container > button {
     padding: 5px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    display: inline;
+    float: right;
 }
 
 nav div.avatar-container {
     margin-right: 15px;
     text-align: right;
+    padding-top: 0;
 }
 
 .main-container {
@@ -121,14 +128,16 @@ nav div.avatar-container {
     background-color: #ffffff;
 }
 
-#active-user-info-container{
-  width: 25%;
-  min-height: 15%;
-  margin-left: auto;
-  margin-right: 0;
-  padding: 45px 15px 15px 15px;
-  background-color: #ffffff;
-  display: none;
+#active-user-info-container {
+    width: 15%;
+    min-height: 15%;
+    margin-left: auto;
+    margin-right: 0;
+    padding: 45px 15px 15px 15px;
+    background-color: #ffffff;
+    display: none;
+    position: fixed;
+    right: 0px;
 }
 
 .post {
@@ -175,7 +184,7 @@ nav div.avatar-container {
     padding: 10px;
 }
 
-.post .post-image img {
+.post .post-image img, video {
     width: 100%;
     min-height: 150px;
     max-height: 350px;
@@ -199,7 +208,7 @@ nav div.avatar-container {
     display: inline;
 }
 
-.post .post-title ~ .post-actions {
+.post-actions {
     padding: 10px;
 }
 
@@ -222,9 +231,7 @@ nav div.avatar-container {
 }
 
 #avatar-button {
-    border:0;
     padding: 0px 0px;
-    margin: 0px 0;
-    border-radius: 0px;
-    background:transparent;
+    background: transparent;
+    box-shadow: none;
 }
