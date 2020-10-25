@@ -33,6 +33,19 @@ $(function () {
     loadProfiles()
         .then(function (profiles) {
             displayProfiles(profiles)
+            let followButtons = $('.follow-button');
+            for (let followButton of followButtons) {
+                $(followButton).click(function () {
+                    if ($(this).hasClass('followed')) {
+                        $(this).removeClass('followed');
+                        $(this).text("Follow");
+                    } else {
+                        $(this).addClass('followed');
+                        $(this).text("Followed");
+
+                    }
+                })
+            }
         })
         .catch(function () {
             alert('Error loading profile info')
@@ -133,12 +146,18 @@ function displayPosts(posts) {
 
 function displayProfiles(profiles) {
     result = "";
+
     for (let profile of profiles) {
         result += `<div class="profile">
-        <span class="profile-info">
-          <img src="${profile.avatar}" alt="Profile picture">
+        <div class="profile-info">
+          <img src="${profile.avatar}" id="profile-image" alt="Profile picture">
+          <div id="text"
           <small>${profile.firstname + " " + profile.lastname}</small>
-        </span>
+          </div>
+          <div>
+          <button type="button" name="follow" class="follow-button">Follow</button>
+          </div>
+        </div>
       </div>`
     }
 

@@ -235,3 +235,41 @@ nav div.avatar-container {
     background: transparent;
     box-shadow: none;
 }
+
+.profile {
+    text-align: center;
+    font-weight: bold;
+    float: left;
+    border: 2px solid lightgrey;
+    width: 45%;
+    height: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    padding-top: 10px;
+}
+
+#profile-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-container {
+    align-content: center;
+    width: 50%;
+    overflow-y:auto;
+    min-height: 100%;
+    margin: auto;
+    padding: 90px 15px 15px 15px;
+    background-color: #ffffff;
+}
+
+.follow-button {
+    margin-top: 20px;
+    background-color: #8a8a8a;
+}
+
+.follow-button.followed {
+    background-color: #01579b;
+}
